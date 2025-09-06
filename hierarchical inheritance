@@ -1,0 +1,43 @@
+package .JavaCom;
+// Base class
+class Person {
+    void display() {
+        System.out.println("I am a person.");
+    }
+}
+
+// Derived class 1
+class Teacher extends Person {
+    void tea() {
+        System.out.println("I am a teacher.");
+    }
+}
+
+// Derived class 2
+class Student extends Person {
+    void std() {
+        System.out.println("I am a student.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        Student s = new Student();
+
+        t.display(); // Inherited from Person
+        t.tea();   // Teacher-specific method
+
+        s.display(); // Inherited from Person
+        s.std();   // Student-specific method
+    }
+}
+
+OUTPUT:-
+
+I am a person.
+I am a teacher.
+
+
+I am a person.
+I am a student. 
