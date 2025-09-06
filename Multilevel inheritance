@@ -1,0 +1,37 @@
+package java.Com;
+// Base class
+class Grandfather {
+    void showGrandfather() {
+        System.out.println("I am the Grandfather.");
+    }
+}
+
+// Derived class from Grandfather
+class Father extends Grandfather {
+    void showFather() {
+        System.out.println("I am the Father.");
+    }
+}
+
+// Derived class from Father
+class Son extends Father {
+    void showSon() {
+        System.out.println("I am the Son.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Son s = new Son();
+        
+        // Accessing methods from all classes
+        s.showGrandfather(); // From Grandfather
+        s.showFather();      // From Father
+        s.showSon();         // From Son
+    }
+}
+
+OUTPUT
+I am the Grandfather.
+I am the Father.
+I am the Son.
